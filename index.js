@@ -1,15 +1,25 @@
-let firstCard = 4;
-let secondCard = 7;
+let firstCard = 10;
+let secondCard = 11;
 let sum = firstCard + secondCard;
+let hasBlackjack = false;
+let isAlive = true;
+let message = "";
 
-if (sum <= 20) {
-    console.log("Do you want to draw another card? 😄")
-} else if(sum === 21) {
-    console.log("Woohoo! You've got a Blackjack! 😎")
-} else {
-    console.log("You're out! 😲")
+
+function startGame() {
+    if (sum <= 20) {
+        message = "Do you want to draw another card? 😄";
+    } else if(sum === 21) {
+        message = "Woohoo! You've got a Blackjack! 😎";
+        hasBlackjack = true;
+        console.log(hasBlackjack)
+    } else {
+        message = "You're out! 😲";
+        isAlive = false;
+        console.log(isAlive)
+    }
+    console.log(message);
 }
-
 //let age = 22;
 //
 //if(age < 21 ) {
