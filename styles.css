@@ -1,36 +1,32 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 40vh;
-    padding: 0;
-    background-image: url(images/Casino.png);
+    background-image: url(images/Casino.jpg);
     background-size: cover;
     text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 
 h1 {
-    padding-top: 40px;
     color: goldenrod;
-    font-size: 35px;
 }
 
 #message-el {
     font-style: italic;
 }
 
-#start-game {
-    font-weight: bold;
-    font-size: 20px;
+button {
     color: #016f32;
     width: 150px;
     background: goldenrod;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 10px auto auto;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
 }
