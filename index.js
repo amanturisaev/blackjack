@@ -1,5 +1,5 @@
 let firstCard = 10;
-let secondCard = 9;
+let secondCard = 6;
 let sum = firstCard + secondCard;
 let hasBlackjack = false;
 let isAlive = true;
@@ -9,6 +9,10 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
+    renderGame();
+}
+
+function renderGame() {
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
     sumEl.textContent = "Sum: " + sum;
     if (sum <= 20) {
@@ -29,7 +33,7 @@ function newCard() {
     console.log("Drawing a new card from the deck!");
     let anotherCard = 5;
     sum += anotherCard;
-    startGame();
+    renderGame();
 }
 
 //let age = 22;
