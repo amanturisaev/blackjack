@@ -1,5 +1,6 @@
 let firstCard = 10;
 let secondCard = 6;
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackjack = false;
 let isAlive = true;
@@ -13,7 +14,11 @@ function startGame() {
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
+    cardsEl.textContent = "Cards: ";
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " ";
+    }
+    
     sumEl.textContent = "Sum: " + sum;
     if (sum <= 20) {
         message = "Do you want to draw another card?";
@@ -33,23 +38,7 @@ function newCard() {
     console.log("Drawing a new card from the deck!");
     let anotherCard = 5;
     sum += anotherCard;
+    cards.push(anotherCard);
+    console.log(cards);
     renderGame();
 }
-
-//let age = 22;
-//
-//if(age < 21 ) {
-//    console.log ("You can not enter the club!")
-//} else {
-//    console.log("Welcome!")
-//}
-
-//let age = 24;
-//
-//if (age < 100) {
-//    console.log("Not eligible!");
-//} else if (age === 100) {
-//    console.log("Here is your birthday card from the King!");
-//} else {
-//    console.log("Not eligible, you've already gotten one!");
-//}
